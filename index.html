@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Israil Mukhammadsafoyev | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <header>
+        <div class="container">
+            <h1><span class="highlight">Port</span>folio</h1>
+        </div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="profile-section">
+            <div class="profile-card">
+                <h2>About Me</h2>
+                <div class="profile-info">
+                    <h3>Israil Mukhammadsafoyev</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Tashkent, Uzbekistan</p>
+                    <p><i class="fas fa-graduation-cap"></i> First-year student at INHA University</p>
+                    <p><i class="fas fa-book"></i> Currently studying 7 subjects with <span class="highlight">Intro to IT</span> being the most challenging.</p>
+                </div>
+
+                <div class="skills-section">
+                    <h2>Skills & Achievements</h2>
+                    <div class="skill-item">
+                        <span class="skill-label"><i class="fas fa-code"></i> Programming:</span>
+                        <div class="skill-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">SQL3</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">HTML</span>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <i class="fas fa-trophy"></i>
+                        <span>Projects Completed: <strong>10</strong></span>
+                    </div>
+                    <div class="achievement-item">
+                        <i class="fas fa-eye"></i>
+                        <span>Portfolio Views: <strong>7.7K</strong></span>
+                    </div>
+                </div>
+
+                <div class="time-display">
+                    <i class="far fa-clock"></i>
+                    <span id="time">Tashkent Time: 00:00:00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cars-section">
+            <h2>Dream Cars Collection</h2>
+            <div class="cars-grid">
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/Nissan GT-R R35.jpg" alt="Nissan GT-R R35">
+                        <div class="car-overlay">
+                            <a href="https://ru.wikipedia.org/wiki/Nissan_GT-R">Nissan GT-R R35</a>
+                            <p>Godzilla - The Japanese Legend</p>
+                            <ul class="car-specs">
+                                <li><i class="fas fa-tachometer-alt"></i> 565 HP</li>
+                                <li><i class="fas fa-gauge-high"></i> 0-60: 2.7s</li>
+                                <li><i class="fas fa-road"></i> AWD</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/2023-Porsche-911-GT3-RS-008.jpg" alt="Porsche 911 GT3 RS">
+                        <div class="car-overlay">
+                            <a href="https://www.porsche.com/pap/models/911/911-gt3-rs/911-gt3-rs/">Porsche 911 GT3 RS</a>
+                            <p>Track Beast Perfection</p>
+                            <ul class="car-specs">
+                                <li><i class="fas fa-tachometer-alt"></i> 518 HP</li>
+                                <li><i class="fas fa-gauge-high"></i> 0-60: 3.0s</li>
+                                <li><i class="fas fa-road"></i> RWD</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><i class="fas fa-code"></i> Created by Israil Mukhammadsafoyev © 2024</p>
+    </footer>
+
+    <script>
+        function updateTime() {
+            const time = new Date();
+            const timeString = time.toLocaleTimeString();
+            document.getElementById('time').innerHTML = 'Tashkent Time: ' + timeString;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+:root {
+    --primary-color: #0a0a0a;
+    --secondary-color: #1a1a1a;
+    --accent-color: #ff3e3e;
+    --text-light: #ffffff;
+    --text-gray: #a0a0a0;
+    --gradient-start: #ff3e3e;
+    --gradient-end: #ff7676;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(255, 62, 62, 0.1), transparent 70%),
+                radial-gradient(circle at bottom left, rgba(255, 62, 62, 0.1), transparent 70%);
+    z-index: -1;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--card-border);
+    margin-bottom: 2rem;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.highlight {
+    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.profile-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    height: fit-content;
+}
+
+.profile-info {
+    margin: 1.5rem 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.tag {
+    background: rgba(255, 62, 62, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    border: 1px solid var(--accent-color);
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.time-display {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.car-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-image {
+    position: relative;
+    height: 300px;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.car-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.car-card:hover .car-overlay {
+    transform: translateY(0);
+}
+
+.car-specs {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.car-specs li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid var(--card-border);
+}
+
+@media (max-width: 1024px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .cars-grid {
+        grid-template-columns: 1fr;
+    }
+}
